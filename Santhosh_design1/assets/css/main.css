@@ -1,0 +1,144 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Custom properties */
+:root{
+    --primary-color1:#9AC5F4;
+    --primary-color2:#99DBF5;
+    --primary-color3:#A7ECEE;
+    --primary-color4:#FFEEBB;
+    --light-color-alt:#fff;
+    --font-family: 'Poppins', sans-serif;
+    --font-size-xsm: 1.2rem;
+    --font-size-sm: 1.6rem;
+    --font-size-md: 2.4rem;
+    --font-size-lg: 3rem;
+    --font-size-xl: 4rem;
+    --gap: 2rem;
+    --margin-sm: 5rem;
+    --margin-md: 10rem;
+}
+
+/* base */
+body{
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    color: var(--light-color-alt);
+    background-color: var(--primary-color1);
+    letter-spacing: 1px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+input,
+button {
+  font: inherit;
+  color: inherit;
+  border: none;
+  background-color: transparent;
+}
+
+i{
+    font-size: var(--font-size-md);
+}
+/* Theme color change */
+
+/*content*/
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: normal;
+    align-items: normal;
+    align-content: normal;
+}
+
+/* .containerDivs{
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+} */
+
+.loginImageDiv > img{
+    /* margin: var(--margin-md); */
+    height: 100%;
+    width: 100%;
+}
+
+.loginImageDiv{
+    width:50%; 
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    background-color: var(--primary-color2);
+}
+
+.loginBoxDiv{
+     width:50%; 
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    background-color: var(--primary-color3);
+}
+
+.loginBox{
+    /* width:250px; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.loginBoxItems{
+    width:80%;
+}
+
+.loginBox > input {
+    margin: var(--gap);
+    border: 0.35rem solid #fff;
+}
+
+.loginBox > button {
+    background-color: var(--primary-color4);
+    width:40%;
+}
+
+.loginBox > img{
+    max-width:25%;
+    max-height:25%;
+}
+
+.welcomeText{
+  text-align: center;
+}
