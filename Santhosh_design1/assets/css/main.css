@@ -24,8 +24,15 @@ body{
     font-family: var(--font-family);
     font-size: var(--font-size-sm);
     color: var(--light-color-alt);
-    background-color: var(--primary-color1);
+    /* background-color: var(--primary-color1); */
     letter-spacing: 1px;
+
+    background-image:url(../images/background1.avif);
+
+    background-repeat:no-repeat;
+ 
+    background-size:cover;
+
 }
 
 *{
@@ -48,7 +55,8 @@ ul{
 }
 
 img{
-    max-width: 100%;
+    /* max-width:100%;
+    max-height:100%; */
 }
 
 input,
@@ -66,12 +74,18 @@ i{
 
 /*content*/
 .container{
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: normal;
     align-items: normal;
-    align-content: normal;
+    align-content: normal; */
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    text-align: center; 
 }
 
 /* .containerDivs{
@@ -84,44 +98,55 @@ i{
 } */
 
 .loginImageDiv > img{
-    /* margin: var(--margin-md); */
-    height: 100%;
-    width: 100%;
+
 }
 
+
 .loginImageDiv{
-    width:50%; 
-    display: block;
+     /* width:50%;  */
+    height:100%; 
+    /* display: block; */
     flex-grow: 1;
     flex-shrink: 1;
-    flex-basis: auto;
     align-self: auto;
     order: 0;
-    background-color: var(--primary-color2);
+    /* background-color: var(--primary-color2); */
 }
 
 .loginBoxDiv{
-     width:50%; 
-    display: block;
+     /* width:50%;  */
+     height:100%; 
+     /* display: block; */
     flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto;
+    flex-shrink: 0;
     align-self: auto;
-    order: 0;
-    background-color: var(--primary-color3);
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: var(--primary-color3); */
 }
 
 .loginBox{
     /* width:250px; */
+    width: 55%;
+    height:85%;
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: var(--primary-color2);
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,1), 
+    0 1px 1px 0 rgba(0,0,0,1), 
+    0 1px 3px 0 rgba(0,0,0,1);
+    border-radius: 1rem;
 
 }
 
 .loginBoxItems{
-    width:80%;
+    width: 50%;
+    margin: 1rem;
+    text-align: center;
 }
 
 .loginBox > input {
@@ -134,9 +159,10 @@ i{
     width:40%;
 }
 
-.loginBox > img{
-    max-width:25%;
-    max-height:25%;
+.loginBoxItems > img{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
 }
 
 .welcomeText{
