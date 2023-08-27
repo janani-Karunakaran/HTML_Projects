@@ -16,24 +16,57 @@
     <body>
         <div class="container">
             <div class="containerDivs loginImageDiv"> 
-                 <!-- <img src="./assets/images/background1.avif" alt="login image">  -->
+                <!-- <img src="./assets/images/background1.avif" alt="login image">  -->
             </div>
             <div class="containerDivs loginBoxDiv">
+  
                 <div class="loginBox">
+                    <div class="theme-switch-wrapper">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox" />
+                      </label>
+                      <em>Enable Dark Mode!</em>
+                    </div>
                     <div class="loginBoxItems">
-                    <img src="./assets/images/sjlogo1.png" alt="logo image"/></div>
+                        <img src="./assets/images/sjlogo1.png" alt="logo image" />
+                    </div>
                     <div class="loginBoxItems welcomeText">welcome</div>
-                     <div class="loginBoxItems">   <input type="text" name="login" placeholder="login Id" /></div>
-                        <div class="loginBoxItems">    <input type="password" name="password" placeholder="password" /></div>
-                            <div class="loginBoxItems">   <button type="submit" > Submit</button></div>
+                    <div class="loginBoxItems"> <input type="text" name="login" placeholder="Login id" /></div>
+                    <div class="loginBoxItems"> <input type="password" name="password" placeholder="Password" /></div>
+                    <div class="loginBoxItems"> <button type="submit" class="submitButton"> Submit</button></div>
                     <div class="loginBoxItems icons">
-                        <button>fb</button>
-                        <button>twitter</button>
-                        <button>insta</button>
-                        <button>threads</button>
+                        <button><i class="ri-facebook-circle-fill"></i></button>
+                        <button><i class="ri-twitter-fill"></i></button>
+                        <button><i class="ri-instagram-fill"></i></button>
+                        <button><i class="ri-github-fill"></i></button>
                     </div>
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+            const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+            const currentTheme = localStorage.getItem('theme');
+
+            if (currentTheme) {
+                document.documentElement.setAttribute('data-theme', currentTheme);
+
+                if (currentTheme === 'dark') {
+                    toggleSwitch.checked = true;
+                }
+            }
+
+            function switchTheme(e) {
+                if (e.target.checked) {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                }
+                else {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                    localStorage.setItem('theme', 'light');
+                }
+            }
+
+            toggleSwitch.addEventListener('change', switchTheme, false);
+        </script>
     </body>
 </html>
